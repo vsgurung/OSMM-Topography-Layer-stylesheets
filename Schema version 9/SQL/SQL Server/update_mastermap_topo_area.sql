@@ -61,7 +61,8 @@ STYLE_CODE =
  WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 AND CHARINDEX('Rail', DescriptiveGroup) > 0 THEN 4  
  WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 THEN 5  
  WHEN CHARINDEX('Level Crossing', DescriptiveTerm) > 0 THEN 6  
- WHEN DescriptiveTerm = 'Traffic Calming' THEN 7  WHEN DescriptiveTerm = 'Pylon' THEN 8  
+ WHEN DescriptiveTerm = 'Traffic Calming' THEN 7  
+ WHEN DescriptiveTerm = 'Pylon' THEN 8  
  WHEN DescriptiveTerm = 'Track' THEN 9  WHEN DescriptiveTerm = 'Step' THEN 10  
  WHEN CHARINDEX('Canal', DescriptiveTerm) > 0 THEN 11  
  WHEN CHARINDEX('Footbridge', DescriptiveTerm) > 0 THEN 12  
@@ -71,24 +72,35 @@ STYLE_CODE =
  WHEN CHARINDEX('Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered)', DescriptiveTerm) > 0 THEN 15  
  WHEN CHARINDEX('Agricultural Land', DescriptiveTerm) > 0 THEN 16  
  WHEN CHARINDEX('Orchard', DescriptiveTerm) > 0 THEN 17 
- WHEN CHARINDEX('Coppice Or Osiers', DescriptiveTerm) > 0 THEN 18  WHEN CHARINDEX('Scrub', DescriptiveTerm) > 0 THEN 19  
+ WHEN CHARINDEX('Coppice Or Osiers', DescriptiveTerm) > 0 THEN 18  
+ WHEN CHARINDEX('Scrub', DescriptiveTerm) > 0 THEN 19  
  WHEN CHARINDEX('Boulders', DescriptiveTerm) > 0 OR CHARINDEX('Boulders (Scattered)', DescriptiveTerm) > 0 THEN 20  
  WHEN CHARINDEX('Rock', DescriptiveTerm) > 0 OR CHARINDEX('Rock (Scattered)', DescriptiveTerm) > 0 THEN 21  
- WHEN CHARINDEX('Scree', DescriptiveTerm) > 0 THEN 22  WHEN CHARINDEX('Rough Grassland', DescriptiveTerm) > 0 THEN 23  
- WHEN CHARINDEX('Heath', DescriptiveTerm) > 0 THEN 24  WHEN CHARINDEX('Marsh Reeds Or Saltmarsh', DescriptiveTerm) > 0 OR CHARINDEX('Saltmarsh', DescriptiveTerm) > 0 THEN 25  
- WHEN CHARINDEX('Sand', DescriptiveTerm) > 0 THEN 26  WHEN CHARINDEX('Mud', DescriptiveTerm) > 0 THEN 27  
- WHEN CHARINDEX('Shingle', DescriptiveTerm) > 0 THEN 28  WHEN CHARINDEX('Marsh', DescriptiveTerm) > 0 THEN 29  
- WHEN CHARINDEX('Reeds', DescriptiveTerm) > 0 THEN 30  WHEN CHARINDEX('Foreshore', DescriptiveTerm) > 0 THEN 31  
- WHEN DescriptiveTerm = 'Slope' THEN 32  WHEN DescriptiveTerm = 'Cliff' THEN 33  -- Descriptive Group Rules  
- WHEN CHARINDEX('Building', DescriptiveGroup) > 0 THEN 34  WHEN CHARINDEX('General Surface', DescriptiveGroup) > 0 AND Make = 'Natural' THEN 35  
+ WHEN CHARINDEX('Scree', DescriptiveTerm) > 0 THEN 22  
+ WHEN CHARINDEX('Rough Grassland', DescriptiveTerm) > 0 THEN 23  
+ WHEN CHARINDEX('Heath', DescriptiveTerm) > 0 THEN 24  
+ WHEN CHARINDEX('Marsh Reeds Or Saltmarsh', DescriptiveTerm) > 0 OR CHARINDEX('Saltmarsh', DescriptiveTerm) > 0 THEN 25  
+ WHEN CHARINDEX('Sand', DescriptiveTerm) > 0 THEN 26  
+ WHEN CHARINDEX('Mud', DescriptiveTerm) > 0 THEN 27  
+ WHEN CHARINDEX('Shingle', DescriptiveTerm) > 0 THEN 28  
+ WHEN CHARINDEX('Marsh', DescriptiveTerm) > 0 THEN 29  
+ WHEN CHARINDEX('Reeds', DescriptiveTerm) > 0 THEN 30  
+ WHEN CHARINDEX('Foreshore', DescriptiveTerm) > 0 THEN 31  
+ WHEN DescriptiveTerm = 'Slope' THEN 32  
+ WHEN DescriptiveTerm = 'Cliff' THEN 33  
+ -- Descriptive Group Rules  
+ WHEN CHARINDEX('Building', DescriptiveGroup) > 0 THEN 34  
+ WHEN CHARINDEX('General Surface', DescriptiveGroup) > 0 AND Make = 'Natural' THEN 35  
  WHEN CHARINDEX('General Surface', DescriptiveGroup) > 0 AND (Make = 'Manmade' OR Make = 'Unknown') THEN 36  
  WHEN CHARINDEX('Road Or Track', DescriptiveGroup) > 0 AND Make = 'Manmade' THEN 37  
  WHEN CHARINDEX('Roadside', DescriptiveGroup) > 0 AND Make = 'Natural' THEN 38  
  WHEN CHARINDEX('Roadside', DescriptiveGroup) > 0 AND (Make = 'Manmade' OR Make = 'Unknown') THEN 39  
- WHEN CHARINDEX('Inland Water', DescriptiveGroup) > 0 THEN 40  WHEN CHARINDEX('Path', DescriptiveGroup) > 0 THEN 41  
+ WHEN CHARINDEX('Inland Water', DescriptiveGroup) > 0 THEN 40  
+ WHEN CHARINDEX('Path', DescriptiveGroup) > 0 THEN 41  
  WHEN CHARINDEX('Rail', DescriptiveGroup) > 0 AND (Make = 'Manmade' OR Make = 'Unknown') THEN 42  
  WHEN CHARINDEX('Rail', DescriptiveGroup) > 0 AND Make = 'Natural' THEN 43  
- WHEN CHARINDEX('Structure', DescriptiveGroup) > 0 THEN 44  WHEN DescriptiveGroup = 'Glasshouse' THEN 45  
+ WHEN CHARINDEX('Structure', DescriptiveGroup) > 0 THEN 44  
+ WHEN DescriptiveGroup = 'Glasshouse' THEN 45  
  WHEN CHARINDEX('Landform', DescriptiveGroup) > 0 AND Make = 'Natural' THEN 46  
  WHEN CHARINDEX('Tidal Water', DescriptiveGroup) > 0 THEN 47  
  WHEN CHARINDEX('Landform', DescriptiveGroup) > 0 AND Make = 'Manmade' THEN 48  
