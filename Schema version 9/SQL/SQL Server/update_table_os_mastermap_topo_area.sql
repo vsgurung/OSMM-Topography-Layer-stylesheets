@@ -14,8 +14,8 @@ CASE
   WHEN CHARINDEX('Canal', DescriptiveTerm) > 0 THEN 'Canal Fill'
   WHEN CHARINDEX('Footbridge', DescriptiveTerm) > 0 THEN 'Footbridge Fill'
   -- Natural Environment Descriptive Term Rules
-  --WHEN (CHARINDEX('Nonconiferous Trees,Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)', DescriptiveTerm) > 0) AND (CHARINDEX('Coniferous Trees,Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0) THEN 'Mixed Woodland Fill'
-  WHEN DescriptiveTerm IN ('Nonconiferous Trees,Coniferous Trees','Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)','Coniferous Trees,Nonconiferous Trees','Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)') THEN 'Mixed Woodland Fill'
+  WHEN (CHARINDEX('Nonconiferous Trees,Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)', DescriptiveTerm) > 0) AND (CHARINDEX('Coniferous Trees,Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0) THEN 'Mixed Woodland Fill'
+  --WHEN DescriptiveTerm IN ('Nonconiferous Trees,Coniferous Trees','Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)','Coniferous Trees,Nonconiferous Trees','Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)') THEN 'Mixed Woodland Fill'
   WHEN CHARINDEX('Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0 THEN 'Nonconiferous Tree Fill'
   WHEN CHARINDEX('Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered)', DescriptiveTerm) > 0 THEN 'Coniferous Tree Fill'
   WHEN CHARINDEX('Agricultural Land', DescriptiveTerm) > 0 THEN 'Agricultural Land Fill'
@@ -70,8 +70,8 @@ CASE
   WHEN CHARINDEX('Canal', DescriptiveTerm) > 0 THEN 11
   WHEN CHARINDEX('Footbridge', DescriptiveTerm) > 0 THEN 12
   -- Natural Environment Descriptive Term Rules
-  --WHEN (CHARINDEX('Nonconiferous Trees,Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)', DescriptiveTerm) > 0) AND (CHARINDEX('Coniferous Trees,Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0) THEN 13
-  WHEN DescriptiveTerm IN ('Nonconiferous Trees,Coniferous Trees','Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)','Coniferous Trees,Nonconiferous Trees','Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)') THEN 13
+  WHEN (CHARINDEX('Nonconiferous Trees,Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)', DescriptiveTerm) > 0) AND (CHARINDEX('Coniferous Trees,Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0) THEN 13
+  --WHEN DescriptiveTerm IN ('Nonconiferous Trees,Coniferous Trees','Nonconiferous Trees (Scattered),Coniferous Trees (Scattered)','Coniferous Trees,Nonconiferous Trees','Coniferous Trees (Scattered),Nonconiferous Trees (Scattered)') THEN 13
   WHEN CHARINDEX('Nonconiferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Nonconiferous Trees (Scattered)', DescriptiveTerm) > 0 THEN 14
   WHEN CHARINDEX('Coniferous Trees', DescriptiveTerm) > 0 OR CHARINDEX('Coniferous Trees (Scattered)', DescriptiveTerm) > 0 THEN 15
   WHEN CHARINDEX('Agricultural Land', DescriptiveTerm) > 0 THEN 16
