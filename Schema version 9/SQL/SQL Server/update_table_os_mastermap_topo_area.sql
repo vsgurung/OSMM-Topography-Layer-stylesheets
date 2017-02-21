@@ -3,7 +3,7 @@ CASE
   -- Built Environment Descriptive Term Rules
   WHEN DescriptiveTerm = 'Multi Surface' THEN 'Multi Surface Fill'
   WHEN DescriptiveTerm = 'Archway' THEN 'Archway Fill'
-  WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 AND (CHARINDEX('Road Or Trac', DescriptiveGroup) > 0 OR CHARINDEX('Roadside', DescriptiveGroup) > 0) THEN 'Road Bridge Fill'
+  WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 AND (CHARINDEX('Road Or Track', DescriptiveGroup) > 0 OR CHARINDEX('Roadside', DescriptiveGroup) > 0) THEN 'Road Bridge Fill'
   WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 AND CHARINDEX('Rail', DescriptiveGroup) > 0 THEN 'Rail Bridge Fill'
   WHEN CHARINDEX('Bridge', DescriptiveTerm) > 0 THEN 'Bridge Fill'
   WHEN CHARINDEX('Level Crossing', DescriptiveTerm) > 0 THEN 'Level Crossing Fill'
