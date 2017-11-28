@@ -27,7 +27,7 @@ CASE
   WHEN CHARINDEX('Scree', DescriptiveTerm) > 0 THEN 'Scree Fill'
   WHEN CHARINDEX('Rough Grassland', DescriptiveTerm) > 0 THEN 'Rough Grassland Fill'
   WHEN CHARINDEX('Heath', DescriptiveTerm) > 0 THEN 'Heath Fill'
-  WHEN CHARINDEX('Marsh Reeds Or Saltmarsh', DescriptiveTerm) > 0 OR CHARINDEX('Saltmarsh', DescriptiveTerm) > 0 THEN 'Marsh Fill'
+  WHEN CHARINDEX('Marsh Reeds Or Saltmarsh', DescriptiveTerm) > 0 OR CHARINDEX('Saltmarsh', DescriptiveTerm) > 0 THEN 'Saltmarsh Fill'
   WHEN CHARINDEX('Sand', DescriptiveTerm) > 0 THEN 'Sand Fill'
   WHEN CHARINDEX('Mud', DescriptiveTerm) > 0 THEN 'Mud Fill'
   WHEN CHARINDEX('Shingle', DescriptiveTerm) > 0 THEN 'Shingle Fill'
